@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+  <ul class="nav fixed-top justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#!/">Main Page</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!/gym">Gym Landing Page</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!/blog">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+    </li>
+  </ul>
+
+
+  <div class="bgimg-paralax">
+    <div class="paralax">
+      <h2 class="paralax-text">Hello, my name is Vasyl Dumych.</h2>
+      <p class="paralax-text">I am a beginner Full Stack Web Developer. This is my portfolio.</p>
+    </div>
+  </div>
+
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm" ng-repeat="portfolio in portfolios">
+        <div class="card" style="width: 18rem;">
+          <a ng-href="{{portfolio.url}}" />
+          <div class="card-body">
+            {{portfolio.name}}
+          </div>
+          <img ng-src="{{portfolio.imageUrl}}" alt="{{portfolio.name}}" class="card-img-bottom" />
+          </a>        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
